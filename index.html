@@ -1,0 +1,592 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Eid Mubarak - Kewa Education</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://kewa.education/wp-content/uploads/2022/04/cropped-jamia-logo-original-PNG-192x192.png" sizes="192x192" />
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eid Mubarak Card Generator - Kewa Education" />
+    <meta property="og:url" content="https://kewa.education/eid/" />
+    <meta property="og:site_name" content="Kewa Education" />
+    <meta name="description" content="Generate and download personalized Eid Mubarak cards with Kewa Education's Card Generator. Celebrate EID with your loved ones. Get started now!" />
+    <meta property="og:image" content="https://kewa.education/eid/eidmetaimage.jpg" />
+    <meta name="twitter:image" content="https://kewa.education/eid/eidmetaimage.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kewa Education - Eid Mubarak Card Generator" />
+    <meta name="twitter:site" content="@jamiamohammadiakokan" />
+    <meta name="twitter:creator" content="@jamiamohammadiakokan" />
+    <meta property="og:description" content="Download Eid Mubarak Card" />
+    <meta name="twitter:description" content="Download Eid Mubarak Card" />
+
+    <script src="canvas2image.js"></script>
+    <link href="font-awesome.min.css" rel="stylesheet" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E0P6TSJ7D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1E0P6TSJ7D');
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KumbhSans';
+            src: url('https://kewa.education/eid/css/KumbhSans-VariableFont_wght.ttf');
+        }
+
+        .logo {
+            width: 100px;
+            height: 
+            100px;
+        }
+            @media only screen and (max-width: 600px) {
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+.doc {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+canvas {
+    display: block;
+    border: 2px solid #888;
+    max-width: 100%;
+    height: auto;
+}
+
+
+ .font-option {
+    font-family: inherit;
+  }
+  
+.thumbnail img {
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border: 5px solid transparent;
+}
+
+.thumbnail img.selected {
+    border-color: #007bff;
+}
+
+header {
+    margin: 0 0 0 0;
+}
+
+body {
+    background-color: #fffff;
+}
+
+
+  .swiper-container {
+    width: 100%;
+    max-width: 360px; 
+    height: 250px;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+    overflow:hidden;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #000;
+  }
+  
+  .swiper-button-next::after, .swiper-button-prev::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 1rem;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.75;
+    border-radius: 50%;
+   color: white;
+    background: black;
+}
+
+#myCanvas {
+  width: 100%; 
+  height: auto;
+}
+
+
+.select2-container .select2-selection--single {
+    height: auto;
+}
+
+  
+</style>
+</head>
+<body class="boxed-layout">
+    <header class="container text-center py-3">
+        <a href="https://kewa.education">
+            <img class="logo" src="https://kewa.education/wp-content/uploads/2022/04/jamia-logo-original-PNG.png">
+        </a>
+        <h3 class="mb-0">Jamia Mohammadia Kokan Mhasla | Eid Greeting Card</h3>
+        <a href="https://kewa.education" class="btn btn-primary mt-2">Visit Website</a>
+    </header>
+    <div class="container">
+    <div class="doc">
+<center><canvas width="1200" height="1200" id="myCanvas"></canvas></center>
+        <br />
+
+        
+        <!-- Swiper container -->
+<div class="swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <!-- Add more designs by copying and pasting the following div structure -->
+    <div class="swiper-slide" >
+      <div class="thumbnail">
+        <img src="Eid1.jpeg" alt="Design 1" data-src="Eid1.jpeg" class="img-fluid"><p><b>Design 1</b></p>
+      </div>
+    </div>
+     <div class="swiper-slide" >
+      <div class="thumbnail">
+        <img src="Eid2.jpeg" alt="Design 1" data-src="Eid2.jpeg" class="img-fluid"><p><b>Design 2</b></p>
+      </div>
+    </div>
+     <div class="swiper-slide" >
+      <div class="thumbnail">
+        <img src="Eid3.jpeg" alt="Design 1" data-src="Eid3.jpeg" class="img-fluid"><p><b>Design 3</b></p>
+      </div>
+    </div>
+     <div class="swiper-slide" >
+      <div class="thumbnail">
+        <img src="Eid4.jpeg" alt="Design 1" data-src="Eid4.jpeg" class="img-fluid"><p><b>Design 4</b></p>
+      </div>
+    </div>
+     <div class="swiper-slide" >
+      <div class="thumbnail">
+        <img src="Eid5.jpeg" alt="Design 1" data-src="Eid5.jpeg" class="img-fluid"><p><b>Design 5</b></p>
+      </div>
+    </div>
+     <div class="swiper-slide" >
+      <div class="thumbnail">
+        <img src="Eid6.jpeg" alt="Design 1" data-src="Eid6.jpeg" class="img-fluid"><p><b>Design 6</b></p>
+      </div>
+    </div>
+     <div class="swiper-slide" >
+      <div class="thumbnail">
+        <img src="Eid7.jpeg" alt="Design 1" data-src="Eid7.jpeg" class="img-fluid"><p><b>Design 7</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid8.jpeg" alt="Design 2" data-src="Eid8.jpeg" class="img-fluid"><p><b>Design 8</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid9.jpeg" alt="Design 3" data-src="Eid9.jpeg" class="img-fluid"><p><b>Design 9</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid10.jpeg" alt="Design 10" data-src="Eid10.jpeg" class="img-fluid"><p><b>Design 10</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid11.jpeg" alt="Design 11" data-src="Eid11.jpeg" class="img-fluid"><p><b>Design 11</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid12.jpeg" alt="Design 12" data-src="Eid12.jpeg" class="img-fluid"><p><b>Design 12</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid13.jpeg" alt="Design 13" data-src="Eid13.jpeg" class="img-fluid"><p><b>Design 13</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid14.jpeg" alt="Design 14" data-src="Eid14.jpeg" class="img-fluid"><p><b>Design 14</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid15.jpeg" alt="Design 15" data-src="Eid15.jpeg" class="img-fluid"><p><b>Design 15</b></p>
+      </div>
+    </div>
+    <!-- Add your remaining designs here -->
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+     
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="font-color">Font Color:</label>
+        <input type="color" id="font-color" name="font-color" value="#000000" class="form-control">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="custom-text">Enter Your Name:</label>
+        <input type="text" id="custom-text" placeholder="Enter Your Name" class="form-control" style="font-size:18px; font-family: 'Kumbh Sans', sans-serif;" />
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="font-family">Font :</label>
+        <select id="font-family" name="font-family" class="font-family-select form-control">
+          <option value="Berkshire Swash" class="font-option" style="font-family: 'Berkshire Swash';">Berkshire Swash</option>
+          <option value="Montserrat" class="font-option" style="font-family: 'Montserrat';">Montserrat</option>
+          <option value="Arial" class="font-option" style="font-family: 'Arial';">Arial</option>
+          <option value="Times New Roman" class="font-option" style="font-family: 'Times New Roman';">Times New Roman</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <br />
+        <input type="button" id="save" value="Download" onclick="saveImg()" class="btn btn-info" style="font-size:18px; text-align:right; " />
+        <input type="button" id="btn" value="Check" onclick="showImg()" class="btn btn-success" style="font-size:18px; text-align:right;" />
+        <hr />
+        <div class="alert alert-info">
+            <ul>
+                <li>Eid Greeting With Your Name</li>
+                <li>Enter Your Name | Click On Check Button | Download</li>
+            </ul>
+        </div>
+
+       
+</div>
+</div>
+<footer class="container text-center py-3">
+    <p>&copy; 2023 Kewa Education. All rights reserved.</p>
+</footer>
+
+<script>
+
+$(document).ready(function() {
+  $('.font-family-select').select2({
+    templateResult: formatFontOption,
+    templateSelection: formatFontOption
+  });
+});
+
+function formatFontOption(font) {
+  if (!font.id) {
+    return font.text;
+  }
+  var $font = $('<span class="font-option" style="font-family:' + font.element.value + ';">' + font.text + '</span>');
+  return $font;
+}
+var currentDesign = "Eid1.jpeg";
+document.addEventListener("DOMContentLoaded", function () {
+  var $swiperSelector = $('.swiper-container');
+
+  $swiperSelector.each(function(index) {
+    var $this = $(this);
+    $this.addClass('swiper-slider-' + index);
+    
+    var loop = $this.data('loop') ? $this.data('loop') : false;
+    var slidesPerView = $this.data('slides-per-view') ? $this.data('slides-per-view') : 2;
+    var spaceBetween = $this.data('space-between') ? $this.data('space-between') : 10;
+
+    var swiper = new Swiper('.swiper-slider-' + index, {
+      slidesPerView: slidesPerView,
+      spaceBetween: spaceBetween,
+      loop: loop,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  });
+
+  var thumbnails = document.querySelectorAll(".thumbnail img");
+  thumbnails.forEach(function (thumbnail) {
+    thumbnail.addEventListener("click", function (e) {
+      thumbnails.forEach(function (thumb) {
+        thumb.classList.remove("selected");
+      });
+      e.target.classList.add("selected");
+      currentDesign = e.target.dataset.src;
+      showImg();
+    });
+  });
+});
+
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+function setTextSettings(design, scaleFactor, fontColor, fontName) {
+  var settings = {
+    'Eid1.jpeg': {
+      fontSize: 40,
+      x: 650,
+      y: 1025,
+      color: '#003836'
+    },
+    'Eid2.jpeg': {
+      fontSize: 40,
+      x: 466,
+      y: 1025,
+      color: '#4a517e' 
+    },
+    'Eid3.jpeg': {
+      fontSize: 40,
+      x: 672,
+      y: 885,
+      color: '#894731' 
+    },
+    'Eid4.jpeg': {
+      fontSize: 40,
+      x: 726,
+      y: 740,
+      color: '#ab7f33' 
+    },
+    'Eid5.jpeg': {
+      fontSize: 40,
+      x: 698,
+      y: 975,
+      color: '#418732' 
+    },
+    'Eid6.jpeg': {
+      fontSize: 40,
+      x: 298,
+      y: 855,
+      color: '#946b29' 
+    },
+    'Eid7.jpeg': { 
+      fontSize: 40,
+      x: 716,
+      y: 1020,
+      color: '#824838'
+    },
+    'Eid8.jpeg': { 
+      fontSize: 40,
+      x: 334,
+      y: 980,
+      color: '#e3ad57'
+    },
+    'Eid9.jpeg': { 
+      fontSize: 40,
+      x: 640,
+      y: 960,
+      color: '#fffffe'
+    },
+    'Eid10.jpeg': { 
+      fontSize: 40,
+      x: 722,
+      y: 1020,
+      color: '#fffffe'
+    },
+    'Eid11.jpeg': { 
+      fontSize: 40,
+      x: 308,
+      y: 882,
+      color: '#fffffe'
+    },
+    'Eid12.jpeg': { 
+      fontSize: 40,
+      x: 650,
+      y: 848,
+      color: '#fffffe'
+    },
+    'Eid13.jpeg': { 
+      fontSize: 40,
+      x: 562,
+      y: 1032,
+      color: '#fffffe'
+    },
+    'Eid14.jpeg': { 
+      fontSize: 40,
+      x: 644,
+      y: 986,
+      color: '#fffffe'
+    },
+    'Eid15.jpeg': { 
+      fontSize: 40,
+      x: 656,
+      y: 1038,
+      color: '#efcb75'
+    }
+  };
+var designSettings = settings[design];
+  // If the form color matches the default form color, use the color defined in JS
+  if (fontColor === '#000000') {
+    fontColor = designSettings.color;
+  }
+   return {
+    color: fontColor,
+    fontSize: (designSettings.fontSize * scaleFactor) + 'px',
+    x: (designSettings.x * scaleFactor),
+    y: (designSettings.y * scaleFactor),
+    fontFamily: fontName
+  };
+}
+function showImg() {
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+  var textElement = document.getElementById("custom-text");
+  var text = textElement ? textElement.value : '';
+  var fontColorInput = document.getElementById("font-color");
+  var fontColor = fontColorInput ? fontColorInput.value : '';
+  var fontFamilySelect = document.getElementById("font-family");
+  var fontFamily = fontFamilySelect ? fontFamilySelect.value : '';
+
+  var img = new Image();
+  img.src = currentDesign;
+
+img.onload = function() {
+    var deviceWidth = window.innerWidth; // or another way to determine device width
+    var isMobile = isMobileDevice();
+
+    if (isMobile) {
+        canvas.width = 390;
+        canvas.height = 390;
+    } else {
+        // use original image size for the canvas
+        canvas.width = img.width;
+        canvas.height = img.height;
+    }
+
+    scaleFactor = canvas.width / img.width;
+
+    // draw the image on the canvas
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+    // get the text settings based on the current image size
+    var designSettings = setTextSettings(currentDesign, scaleFactor, fontColor, fontFamily);
+
+    // draw the text on the image
+    context.fillStyle = designSettings.color;
+    context.font = 'bold ' + designSettings.fontSize + ' ' + designSettings.fontFamily;
+    context.fillText(text, designSettings.x, designSettings.y);
+
+    // If on mobile, scale down the canvas to fit the mobile screen after drawing
+    if (isMobile) {
+        canvas.style.width = deviceWidth + 'px';
+        canvas.style.height = deviceWidth + 'px';
+    }
+  };
+
+}
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function saveImg() {
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+  var originalWidth = canvas.width;
+  var originalHeight = canvas.height;
+  var textElement = document.getElementById("custom-text");
+  var text = textElement ? textElement.value : '';
+var fontColorInput = document.getElementById("font-color");
+  var fontColor = fontColorInput ? fontColorInput.value : '';
+
+  var fontFamilySelect = document.getElementById("font-family");
+  var fontFamily = fontFamilySelect ? fontFamilySelect.value : '';
+
+  var img = new Image();
+  img.src = currentDesign;
+
+  img.onload = function () {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    context.clearRect(0, 0, img.width, img.height);
+    context.drawImage(img, 0, 0, img.width, img.height);
+
+    var designSettings = setTextSettings(currentDesign, 1, fontColor, fontFamily);
+    context.fillStyle = designSettings.color;
+  context.font = 'bold ' + designSettings.fontSize + ' ' + designSettings.fontFamily;
+    context.fillText(capitalizeFirstLetter(text), designSettings.x, designSettings.y);
+
+    var image = canvas.toDataURL("image/jpeg", 1.0).replace("image/jpeg", "image/octet-stream");
+    var link = document.createElement('a');
+    link.download = "Eid_Mubarak.jpg";
+    link.href = image;
+    link.click();
+
+    // Restore the canvas to its original size and redraw the image
+    showImg();
+  };
+}
+document.addEventListener("DOMContentLoaded", function () {
+  var thumbnails = document.querySelectorAll(".thumbnail img");
+  thumbnails.forEach(function (thumbnail) {
+    thumbnail.addEventListener("click", function (e) {
+      thumbnails.forEach(function (thumb) {
+        thumb.classList.remove("selected");
+      });
+      e.target.classList.add("selected");
+      currentDesign = e.target.dataset.src;
+      showImg();
+    });
+  });
+
+  // Call showImg() once to display the initial image
+  showImg();
+
+});
+</script>
+</body>
+</html>
