@@ -3,20 +3,15 @@
 
 <head>
     <title>Eid Mubarak - Kewa Education</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-    <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
-    <meta http-equiv="Pragma" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://kewa.education/wp-content/uploads/2022/04/cropped-jamia-logo-original-PNG-192x192.png" sizes="192x192" />
     <meta charset="utf-8" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Eid Mubarak Card Generator - Kewa Education" />
     <meta property="og:url" content="https://kewa.education/eid/" />
     <meta property="og:site_name" content="Kewa Education" />
     <meta name="description" content="Generate and download personalized Eid Mubarak cards with Kewa Education's Card Generator. Celebrate EID with your loved ones. Get started now!" />
-    <meta property="og:image" content="https://kewa.education/eid/eidmetaimage.jpg" />
-    <meta name="twitter:image" content="https://kewa.education/eid/eidmetaimage.jpg" />
+    <meta property="og:image" content="https://kewa.education/eid/eidmetaimage.jpeg" />
+    <meta name="twitter:image" content="https://kewa.education/eid/eidmetaimage.jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Kewa Education - Eid Mubarak Card Generator" />
     <meta name="twitter:site" content="@jamiamohammadiakokan" />
@@ -34,7 +29,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     
@@ -152,11 +146,6 @@ body {
     background: black;
 }
 
-#myCanvas {
-  width: 100%; 
-  height: auto;
-}
-
 
 .select2-container .select2-selection--single {
     height: auto;
@@ -230,6 +219,36 @@ body {
         <img src="Eid9.jpeg" alt="Design 3" data-src="Eid9.jpeg" class="img-fluid"><p><b>Design 9</b></p>
       </div>
     </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid10.jpeg" alt="Design 10" data-src="Eid10.jpeg" class="img-fluid"><p><b>Design 10</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid11.jpeg" alt="Design 11" data-src="Eid11.jpeg" class="img-fluid"><p><b>Design 11</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid12.jpeg" alt="Design 12" data-src="Eid12.jpeg" class="img-fluid"><p><b>Design 12</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid13.jpeg" alt="Design 13" data-src="Eid13.jpeg" class="img-fluid"><p><b>Design 13</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid14.jpeg" alt="Design 14" data-src="Eid14.jpeg" class="img-fluid"><p><b>Design 14</b></p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="thumbnail">
+        <img src="Eid15.jpeg" alt="Design 15" data-src="Eid15.jpeg" class="img-fluid"><p><b>Design 15</b></p>
+      </div>
+    </div>
     <!-- Add your remaining designs here -->
   </div>
   <!-- Add Pagination -->
@@ -257,7 +276,6 @@ body {
       <div class="form-group">
         <label for="font-family">Font :</label>
         <select id="font-family" name="font-family" class="font-family-select form-control">
-          <option value="Berkshire Swash" class="font-option" style="font-family: 'Berkshire Swash';">Berkshire Swash</option>
           <option value="Montserrat" class="font-option" style="font-family: 'Montserrat';">Montserrat</option>
           <option value="Arial" class="font-option" style="font-family: 'Arial';">Arial</option>
           <option value="Times New Roman" class="font-option" style="font-family: 'Times New Roman';">Times New Roman</option>
@@ -283,7 +301,7 @@ body {
 </div>
 </div>
 <footer class="container text-center py-3">
-    <p>&copy; 2024 Kewa Education. All rights reserved.</p>
+    <p>&copy; 2023 Kewa Education. All rights reserved.</p>
 </footer>
 
 <script>
@@ -302,6 +320,10 @@ function formatFontOption(font) {
   var $font = $('<span class="font-option" style="font-family:' + font.element.value + ';">' + font.text + '</span>');
   return $font;
 }
+
+
+
+
 var currentDesign = "Eid1.jpeg";
 document.addEventListener("DOMContentLoaded", function () {
   var $swiperSelector = $('.swiper-container');
@@ -345,113 +367,117 @@ document.addEventListener("DOMContentLoaded", function () {
 function isMobileDevice() {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
+
+
 function setTextSettings(design, scaleFactor, fontColor, fontName) {
   var settings = {
     'Eid1.jpeg': {
-      fontSize: 40,
-      x: 470,
+      fontSize: 38,
+      x: 650,
       y: 1025,
-      color: '#000'
+      color: '#003836'
     },
     'Eid2.jpeg': {
-      fontSize: 40,
+      fontSize: 38,
       x: 466,
       y: 1025,
-      color: '#000' 
+      color: '#4a517e' 
     },
     'Eid3.jpeg': {
-      fontSize: 40,
+      fontSize: 36,
       x: 672,
-      y: 980,
-      color: '#fff' 
+      y: 885,
+      color: '#894731' 
     },
     'Eid4.jpeg': {
-      fontSize: 40,
-      x: 560,
-      y: 1020,
+      fontSize: 36,
+      x: 726,
+      y: 740,
       color: '#ab7f33' 
     },
     'Eid5.jpeg': {
-      fontSize: 40,
+      fontSize: 36,
       x: 698,
       y: 975,
       color: '#418732' 
     },
     'Eid6.jpeg': {
-      fontSize: 40,
-      x: 710,
-      y: 980,
-      color: '#000' 
+      fontSize: 36,
+      x: 298,
+      y: 855,
+      color: '#946b29' 
     },
     'Eid7.jpeg': { 
-      fontSize: 40,
-      x: 710,
-      y: 980,
-      color: '#fff'
+      fontSize: 36,
+      x: 716,
+      y: 1020,
+      color: '#824838'
     },
     'Eid8.jpeg': { 
-      fontSize: 40,
-      x: 720,
+      fontSize: 36,
+      x: 334,
       y: 980,
-      color: '#000'
+      color: '#e3ad57'
     },
     'Eid9.jpeg': { 
-      fontSize: 40,
-      x: 720,
-      y: 980,
-      color: '#fff'
+      fontSize: 36,
+      x: 640,
+      y: 960,
+      color: '#fffffe'
     },
     'Eid10.jpeg': { 
-      fontSize: 40,
-      x: 730,
-      y: 1000,
+      fontSize: 36,
+      x: 722,
+      y: 1020,
       color: '#fffffe'
     },
     'Eid11.jpeg': { 
-      fontSize: 40,
+      fontSize: 36,
       x: 308,
       y: 882,
       color: '#fffffe'
     },
     'Eid12.jpeg': { 
-      fontSize: 40,
+      fontSize: 36,
       x: 650,
       y: 848,
       color: '#fffffe'
     },
     'Eid13.jpeg': { 
-      fontSize: 40,
+      fontSize: 36,
       x: 562,
       y: 1032,
       color: '#fffffe'
     },
     'Eid14.jpeg': { 
-      fontSize: 40,
+      fontSize: 36,
       x: 644,
       y: 986,
       color: '#fffffe'
     },
     'Eid15.jpeg': { 
-      fontSize: 40,
+      fontSize: 36,
       x: 656,
       y: 1038,
       color: '#efcb75'
     }
   };
+
 var designSettings = settings[design];
   // If the form color matches the default form color, use the color defined in JS
   if (fontColor === '#000000') {
     fontColor = designSettings.color;
   }
-   return {
+  return {
     color: fontColor,
-    fontSize: (designSettings.fontSize * scaleFactor) + 'px',
-    x: (designSettings.x * scaleFactor),
-    y: (designSettings.y * scaleFactor),
+    fontSize: designSettings.fontSize * scaleFactor + 'px',
+    x: designSettings.x * scaleFactor,
+    y: (designSettings.y + (designSettings.mobileYAdjustment || 0)) * scaleFactor,
     fontFamily: fontName
   };
 }
-function showImg() {
+
+function showImg(scaleFactor = 0.5) {
   var canvas = document.getElementById("myCanvas");
   var context = canvas.getContext("2d");
   var textElement = document.getElementById("custom-text");
@@ -461,44 +487,26 @@ function showImg() {
   var fontFamilySelect = document.getElementById("font-family");
   var fontFamily = fontFamilySelect ? fontFamilySelect.value : '';
 
+
   var img = new Image();
   img.src = currentDesign;
 
-img.onload = function() {
-    var deviceWidth = window.innerWidth; // or another way to determine device width
-    var isMobile = isMobileDevice();
+  img.onload = function() {
+    var width = img.width * scaleFactor;
+    var height = img.height * scaleFactor;
+    canvas.width = width;
+    canvas.height = height;
+    context.clearRect(0, 0, width, height);
+    context.drawImage(img, 0, 0, width, height);
 
-    if (isMobile) {
-        canvas.width = 390;
-        canvas.height = 390;
-    } else {
-        // use original image size for the canvas
-        canvas.width = img.width;
-        canvas.height = img.height;
-    }
-
-    scaleFactor = canvas.width / img.width;
-
-    // draw the image on the canvas
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-    // get the text settings based on the current image size
-    var designSettings = setTextSettings(currentDesign, scaleFactor, fontColor, fontFamily);
-
-    // draw the text on the image
+  var designSettings = setTextSettings(currentDesign, scaleFactor, fontColor, fontFamily);
     context.fillStyle = designSettings.color;
-    context.font = 'bold ' + designSettings.fontSize + ' ' + designSettings.fontFamily;
+  context.font = 'bold ' + designSettings.fontSize + ' ' + designSettings.fontFamily;
     context.fillText(text, designSettings.x, designSettings.y);
-
-    // If on mobile, scale down the canvas to fit the mobile screen after drawing
-    if (isMobile) {
-        canvas.style.width = deviceWidth + 'px';
-        canvas.style.height = deviceWidth + 'px';
-    }
   };
-
 }
+
+
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -540,7 +548,11 @@ var fontColorInput = document.getElementById("font-color");
     showImg();
   };
 }
+
+
 document.addEventListener("DOMContentLoaded", function () {
+
+
   var thumbnails = document.querySelectorAll(".thumbnail img");
   thumbnails.forEach(function (thumbnail) {
     thumbnail.addEventListener("click", function (e) {
@@ -557,6 +569,9 @@ document.addEventListener("DOMContentLoaded", function () {
   showImg();
 
 });
+
+
+
 </script>
 </body>
 </html>

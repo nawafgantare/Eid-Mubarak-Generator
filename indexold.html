@@ -1,0 +1,197 @@
+
+<!doctype html>
+<html>
+
+<head>
+
+    <title>Eid Mubarak - Kewa Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eid Mubarak Card - Kewa Education" />
+    <meta property="og:url" content="https://kewa.education/eid/" />
+    <meta property="og:site_name" content="Kewa Education" />
+    <meta property="og:image" content="https://kewa.education/wp-content/uploads/2022/04/jamia-logo-original-PNG.png" />
+    <meta name="twitter:image" content="https://kewa.education/wp-content/uploads/2022/04/jamia-logo-original-PNG.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kewa Education - Eid Mubarak" />
+    <meta name="twitter:site" content="@jamiamohammadiakokan" />
+    <meta name="twitter:creator" content="@jamiamohammadiakokan" />
+    <meta property="og:description" content="Download Eid Mubarak Card" />
+    <meta name="twitter:description" content="Download Eid Mubarak Card" />
+
+
+    <script src="canvas2image.js"></script>
+    <link href="font-awesome.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/OverrideCss.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1E0P6TSJ7D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1E0P6TSJ7D');
+</script>
+    <style>
+
+        @font-face {
+           font-family: 'KumbhSans';
+            src: url('https://kewa.education/eid/css/KumbhSans-VariableFont_wght.ttf');
+            }
+        .logo{
+            width:100px;
+            height:100px;
+        }
+        @media only screen and (max-width: 600px) {
+          .logo{
+            width:50px;
+            height:50px;
+        }
+        }
+
+        .doc {
+            width:100%;
+            margin: 0 auto;
+        }
+
+        canvas {
+            display: block;
+            border: 2px solid #888;
+        }
+        
+        .changer{
+            color: transparent;
+  background-color: #DC143C;
+  background-image: repeating-linear-gradient(45deg,    transparent, transparent 25px,        rgba(255,255,255,.5) 25px, rgba(255,255,255,.5) 50px);
+   -webkit-background-clip: text;
+	  background-clip: text;   
+  animation: color 50s linear infinite; 
+  background-size: 200%;  
+  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+        }
+
+@keyframes color {
+  from { 
+    background-position: 0% 50%;
+  }
+	to { 
+    background-position: 100% 50%; 
+  }
+}
+    </style>
+</head>
+
+<body class=" boxed-layout" >
+    <div class="container" style="max-width:720px;">
+        
+        <div class="doc" style="padding-top:10%; ">
+            <div style=" text-align:center; font-weight:600;font-size:20px;">
+               <a href="https://kewa.education"> <img  class="logo" src="https://kewa.education/wp-content/uploads/2022/04/jamia-logo-original-PNG.png"></a>
+               Jamia Mohammadia Kokan Mhasla | Eid Greeting Card<br>
+              <a href="https://kewa.education" class="changer" >Visit Website</a>
+            </div>
+
+            <canvas width="2633" height="3091" id="myCanvas"></canvas>
+            <br />
+            <input type="text" id="txt" placeholder="Enter Your Name" class="form-control" style="font-size:18px;" />
+            <br />
+            <input type="button" id="save" value="Download" onclick="saveImg()" class="btn btn-info hidden" style="font-size:18px; text-align:right;" />
+            <input type="button" id="btn" value="Check" onclick="showImg()" class="btn btn-success" style="font-size:18px; text-align:right;  " />
+            <hr />
+            <br />
+            <div class="alert alert-info">
+                <ul style="list-style-type: none;">
+                    <li><span class=style="padding-left:8px;"></span>Eid Greeting With Your Name</li>
+                    <li><span class= style="padding-left:8px;"></span> Enter Your Name | Click On Check Button | Download </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    <script>
+      
+      function Download(){
+        var canvas = document.getElementById("myCanvas");
+        image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        var link = document.createElement('a');
+      	 var whatsapp_url = "whatsapp://send?text=" + link;
+    	  window.location.href = whatsapp_url;
+      
+		}
+      
+   
+      	function saveImg(){
+        var canvas = document.getElementById("myCanvas");
+        image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        var link = document.createElement('a');
+        link.download = "Eid_Mubarak.png";
+      
+        link.href = image;
+        link.click();
+		}
+      
+     
+
+        function showImg() {
+            var element = document.getElementById("save");
+            element.classList.remove("hidden");
+      		
+
+
+            var name = document.getElementById("txt").value;
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            context.clearRect(0, 0, 4000, 3000);
+            var fontsize = 80;
+
+            if (name.length > 24) {
+                fontsize = 80 - (name.length - 24);
+            }
+            //alert(name.length);
+            var imageObj = new Image();
+            imageObj.onload = function () {
+                //context.scale(0.15, 0.15);
+                context.drawImage(imageObj, 0, 0);
+                context.font = "bold 120px KumbhSans";
+                //context.fillStyle = "#bf9f5e";
+                context.fillStyle = "#000";
+
+
+                context.textAlign = "center";
+                context.fillText(name, 900, 2720);
+
+
+            };
+            imageObj.src = "eidmubarakjamiamhasla.jpg";
+        }
+
+        window.onload = function () {
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            var imageObj = new Image();
+            imageObj.onload = function () {
+                //context.scale(0.15, 0.15);
+                context.drawImage(imageObj, 0, 0);
+
+            };
+            imageObj.src = "eidmubarakjamiamhasla.jpg";
+        };
+
+
+    </script>
+
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+ </body>
+</html>

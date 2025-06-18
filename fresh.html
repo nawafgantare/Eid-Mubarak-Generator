@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Eid Mubarak - Kewa Education</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Eid Mubarak Card Generator- Kewa Education" />
+  <meta property="og:url" content="https://kewa.education/eid/" />
+  <meta property="og:site_name" content="Kewa Education" />
+  <meta name="description" content="Generate and download personalized Eid Mubarak cards with Kewa Education's Card Generator. Celebrate EID with your loved ones. Get started now!" />
+  <meta property="og:image" content="https://kewa.education/eid/eidmetaimage.jpeg" />
+  <meta name="twitter:image" content="https://kewa.education/eid/eidmetaimage.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kewa Education - Eid Mubarak Card Generator" />
+  <meta name="twitter:site" content="@jamiamohammadiakokan" />
+  <meta name="twitter:creator" content="@jamiamohammadiakokan" />
+  <meta property="og:description" content="Download Eid Mubarak Card" />
+  <meta name="twitter:description" content="Download Eid Mubarak Card" />
+  <link href="font-awesome.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="canvas2image.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E0P6TSJ7D"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+
+   function gtag() {
+    dataLayer.push(arguments);
+   }
+   gtag('js', new Date());
+   gtag('config', 'G-1E0P6TSJ7D');
+  </script>
+  <style>
+   @font-face {
+    font-family: 'KumbhSans';
+    src: url('https://kewa.education/eid/css/KumbhSans-VariableFont_wght.ttf');
+   }
+
+   .logo {
+    width: 100px;
+    height: 100px;
+   }
+
+   @media only screen and (max-width: 600px) {
+    .logo {
+     width: 50px;
+     height: 50px;
+    }
+   }
+
+   .doc {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 2%;
+   }
+
+   canvas {
+    display: block;
+    border: 2px solid #888;
+    max-width: 100%;
+    height: auto;
+   }
+
+   .font-option {
+    font-family: inherit;
+   }
+
+   .thumbnail img {
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border: 5px solid transparent;
+   }
+
+   .thumbnail img.selected {
+    border-color: #007bff;
+   }
+
+   header {
+    margin: 0 0 0 0;
+   }
+
+   body {
+    background-color: #fffff;
+   }
+
+   .swiper-container {
+    width: 100%;
+    max-width: 640px;
+    height: 250px;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+   }
+
+   .swiper-pagination {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+   }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+    color: #000;
+   }
+  </style>
+ </head>
+ <body class="boxed-layout">
+    <header class="container text-center py-3">
+        <a href="https://kewa.education">
+            <img class="logo" src="https://kewa.education/wp-content/uploads/2022/04/jamia-logo-original-PNG.png">
+        </a>
+        <h3 class="mb-0">Jamia Mohammadia Kokan Mhasla | Eid Greeting Card</h3>
+        <a href="https://kewa.education" class="btn btn-primary mt-2">Visit Website</a>
+    </header>
+    <div class="container">
+        <div class="doc">
+            <center>
+                <canvas width="1200" height="1200" id="myCanvas"></canvas>
+            </center>
+            <br />
+
+            <!-- Swiper container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <!-- Add more designs by copying and pasting the following div structure -->
+                    <div class="swiper-slide">
+                        <div class="thumbnail">
+                            <img src="kewa3.jpg" alt="Design 1" data-src="kewa3.jpg" class="img-fluid">
+                            <p><b>Design 1</b></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="thumbnail">
+                            <img src="kewa4.jpg" alt="Design 2" data-src="kewa4.jpg" class="img-fluid">
+                            <p><b>Design 2</b></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="thumbnail">
+                            <img src="kewa4.jpg" alt="Design 3" data-src="kewa4.jpg" class="img-fluid">
+                            <p><b>Design 3</b></p>
+                        </div>
+                    </div>
+                    <!-- Add your remaining designs here -->
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <label for="font-color">Font Color: </label>
+            <input type="color" id="font-color" name="font-color" value="#000000">
+            <input type="text" id="custom-text" placeholder="Enter Your Name" class="form-control" style="font-size:18px; font-family: 'Kumbh Sans', sans-serif;" />
+            <label for="font-family">Font Family: </label>
+            <select id="font-family" name="font-family" class="font-family-select">
+                <option value="Montserrat" class="font-option" style="font-family: 'Montserrat';">Montserrat</option>
+                <option value="Arial" class="font-option" style="font-family: 'Arial';">Arial</option>
+                <option value="Times New Roman" class="font-option" style="font-family: 'Times New Roman';">Times New Roman</option>
+            </select>
+
+            <br />
+            <input type="button" id="save" value="Download" onclick="saveImg()" class="btn btn-info" style="font-size:18px; text-align:right;" />
+            <input type="button" id="btn" value="Check" onclick="showImg()" class="btn btn-success" style="font-size:18px; text-align:right;" />
+<hr />
+<div class="alert alert-info">
+<ul>
+<li>Eid Greeting With Your Name</li>
+<li>Enter Your Name | Click On Check Button | Download</li>
+</ul>
+</div>    
+</div>
+</div>
+<footer class="container text-center py-3">
+    <p>&copy; 2023 Kewa Education. All rights reserved.</p>
+</footer>
+<script>
+    $(document).ready(function() {
+        $('.font-family-select').select2({
+            templateResult: formatFontOption,
+            templateSelection: formatFontOption,
+        });
+    });
+
+function formatFontOption(font) {
+    if (!font.id) {
+        return font.text;
+    }
+    return $('<span class="font-option" style="font-family:' + font.element.value + ';">' + font.text + '</span>');
+}
+
+const isMobileDevice = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+function setTextSettings(design, scaleFactor, fontColor, fontName) {
+    const settings = {
+        'kewa3.jpg': {
+            fontSize: 36,
+            x: 720,
+            y: 1120
+        },
+        'kewa4.jpg': {
+            fontSize: 36,
+            x: 450,
+            y: 1125,
+            mobileYAdjustment: isMobileDevice() ? 10 : 10
+        },
+        'kewa6.jpg': {
+            fontSize: 56,
+            x: 400,
+            y: 1580
+        },
+        'design4.jpg': {
+            fontSize: 40,
+            x: 500,
+            y: 1200
+        },
+    };
+
+    const designSettings = settings[design];
+    return {
+        color: fontColor || designSettings.color,
+        fontSize: designSettings.fontSize * scaleFactor + 'px',
+        x: designSettings.x * scaleFactor,
+        y: (designSettings.y + (designSettings.mobileYAdjustment || 0)) * scaleFactor,
+        fontFamily: fontName,
+    };
+}
+
+function showImg(scaleFactor = 0.5) {
+    const canvas = document.getElementById('myCanvas');
+    const context = canvas.getContext('2d');
+    const text = document.getElementById('custom-text')?.value || '';
+    const fontColor = document.getElementById('font-color')?.value || '';
+    const fontFamily = document.getElementById('font-family')?.value || '';
+
+    const img = new Image();
+    img.src = currentDesign;
+    img.onload = function() {
+        const width = img.width * scaleFactor;
+        const height = img.height * scaleFactor;
+        canvas.width = width;
+        canvas.height = height;
+        context.clearRect(0, 0, width, height);
+        context.drawImage(img, 0, 0, width, height);
+
+        const designSettings = setTextSettings(currentDesign, scaleFactor, fontColor, fontFamily);
+        context.fillStyle = designSettings.color;
+        context.font = `bold ${designSettings.fontSize} ${designSettings.fontFamily}`;
+        context.fillText(text, designSettings.x, designSettings.y);
+    };
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function saveImg() {
+    const canvas = document.getElementById('myCanvas');
+    const context = canvas.getContext('2d');
+    const text = document.getElementById('custom-text')?.value || '';
+    const fontColor = document.getElementById('font-color')?.value || '';
+    const fontFamily = document.getElementById('font-family')?.value || '';
+
+    const img = new Image();
+    img.src = currentDesign;
+    img.onload = function() {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        context.clearRect(0, 0, img.width, img.height);
+        context.drawImage(img, 0, 0, img.width, img.height);
+
+        const designSettings = setTextSettings(currentDesign, 1, fontColor, fontFamily);
+        context.fillStyle = designSettings.color;
+        context.font = `bold ${designSettings.fontSize} ${designSettings.fontFamily}`;
+        context.fillText(capitalizeFirstLetter(text), designSettings.x, designSettings.y);
+        const image = canvas.toDataURL("image/jpeg", 1.0).replace("image/jpeg", "image/octet-stream");
+        const link = document.createElement('a');
+        link.download = "Eid_Mubarak.jpg";
+        link.href = image;
+        link.click();
+
+        showImg();
+
+    };
+}
+
+showImg();
+
+const thumbnails = document.querySelectorAll(".thumbnail img");
+thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", function(e) {
+        thumbnails.forEach((thumb) => {
+            thumb.classList.remove("selected");
+        });
+        e.target.classList.add("selected");
+        currentDesign = e.target.dataset.src;
+        showImg();
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+}); 
+</script>
+</body>
+</html>
